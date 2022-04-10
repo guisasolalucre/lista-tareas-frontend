@@ -1,0 +1,21 @@
+<div class="container">
+
+    <div class="header">
+        <h1>Lista de tareas</h1>
+        <button class="btn btn-sm btn-success" [routerLink]="['/agregar']">Agregar</button>
+    </div>
+
+    <div class="lista" *ngFor="let task of tareas">
+        <div class="task" [ngClass] = "{reminder: task.reminder}">
+            <div class="titulo">
+                <h4>{{task.text}}</h4>
+                <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-sm btn-info" (click)="recordar(task.id)">Recordar</button>
+                    <button type="button" class="btn btn-sm btn-warning" [routerLink]="['/editar', task.id]">Editar</button>
+                    <button type="button" class="btn btn-sm btn-danger" (click)="eliminar(task.id)">Eliminar</button>
+                </div>
+            </div>
+            <p>{{task.day}}</p>
+        </div>
+    </div>
+</div>

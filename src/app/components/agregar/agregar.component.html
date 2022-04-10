@@ -1,0 +1,25 @@
+<div class="container">
+
+    <h2>Nueva tarea</h2>
+    <form class="add-form" (ngSubmit)="guardar()">
+
+        <div class="form-control">
+            <label for="text">Tarea <strong style="color: red;">*</strong></label>
+            <input type="text" name="text" id="text" [(ngModel)]="tareaNueva.text">
+        </div>
+        <div class="form-control">
+            <label for="day">Día y hora</label>
+            <input type="text" name="day" id="day" [(ngModel)]="tareaNueva.day">
+        </div>
+        <div class="form-control">
+            <div class="form-control-check">
+                <label for="reminder">Recordatorio</label>
+                <input type="checkbox" name="reminder" id="reminder" [(ngModel)]="tareaNueva.reminder">
+            </div>
+            <small>Checkea la casilla si deseas un recordatorio de la tarea.</small>
+        </div>
+        <small><strong style="color: red;">*</strong> Campo obligatorio</small>
+        <br>
+        <input type="submit" value="Guardar tarea" class="btn btn-dark">
+    </form>
+</div>

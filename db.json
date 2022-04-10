@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "text": "otra tarea",
+      "day": "mañana a la tarde",
+      "reminder": false,
+      "id": 2
+    },
+    {
+      "text": "la ultima tarea",
+      "day": "mañana a la noche",
+      "reminder": false,
+      "id": 3
+    },
+    {
+      "text": "lucre",
+      "day": "123",
+      "reminder": false,
+      "id": 4
+    }
+  ]
+}
